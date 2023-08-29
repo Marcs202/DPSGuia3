@@ -39,12 +39,15 @@ export const Header = ({
                     {allProducts.length ? (
                         <>
                             <div className='row-product'>
+                            
                                 {allProducts.map(product => (
                                     <div className='cart-product'
                                         key={product.id}>
                                         <div className='info-cart-product'>
-                                            <span
-                                                className='cantidad-producto-carrito'>
+                                            <figure>
+                                                    <img src={product.urlImage} alt={product.title}  height="75px" />
+                                            </figure>                                    
+                                            <span className='cantidad-producto-carrito'>
                                                 {product.quantity}
                                             </span>
                                             <p
